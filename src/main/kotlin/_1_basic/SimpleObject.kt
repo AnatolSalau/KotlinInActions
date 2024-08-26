@@ -1,3 +1,5 @@
+package _1_basic
+
 interface CanSwim {
     fun swim();
 }

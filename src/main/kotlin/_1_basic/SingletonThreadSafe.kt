@@ -1,3 +1,5 @@
+package _1_basic
+
 class Singleton private constructor() {
     fun printSMT() {
         println("Hello from singleton")
