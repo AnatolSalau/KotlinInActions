@@ -1,7 +1,6 @@
 package _3_oop
 
 import lombok.Data
-import lombok.ToString
 
 
 fun main() {
@@ -15,7 +14,7 @@ open class Person(val name: String) {
     }
 }
 @Data
-class Employee(val empName: String, val company: String): Person(empName) {
+class Employee(val empName: String, val company: String): PersonWithInfo(empName) {
     fun printCompany() = println(company)
     override fun toString(): String {
         return "Employee(empName='$empName', company='$company')"
