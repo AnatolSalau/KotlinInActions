@@ -1,6 +1,6 @@
 package _3_oop
 
-open class Person(val name: String){
+open class PersonCompanion(val name: String){
 
     init{
         counter++
@@ -10,13 +10,13 @@ open class Person(val name: String){
         fun printCounter() = println(counter)
     }
 }
-class Employee(name:String):Person(name)
+class EmployeeCompanion(name:String):PersonCompanion(name)
 
 fun main (){
 
     //Companion object and inheritance
-    Person.printCounter() // 0
-    Employee("Tom")
-    Person.printCounter() // 1
+    PersonCompanion.printCounter() // 0
+    EmployeeCompanion("Tom")
+    PersonCompanion.printCounter() // 1
     // Employee.printCounter() ! Так нельзя - error: unresolved reference: printCounter
 }
