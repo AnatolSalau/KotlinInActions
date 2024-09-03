@@ -9,7 +9,7 @@ fun main() {
     val sms1 = SmsMessageInClass("Привет, ты спишь?")
     skype.send(sms1)
 }
-class Messenger<T>() where T: MessageInClass, T: LoggerInClass{
+private class Messenger<T>() where T: MessageInClass, T: LoggerInClass{
     fun send(mes: T){
         mes.log()
     }

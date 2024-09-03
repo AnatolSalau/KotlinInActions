@@ -25,7 +25,7 @@ fun<T> send(message: T) where T: Message, T: Logger{
 interface Message{ val text: String }
 interface Logger{ fun log() }
 
-class EmailMessage(override val text: String): Message, Logger{
+private class EmailMessage(override val text: String): Message, Logger{
     override fun log() = println("Email: $text")
 }
 class SmsMessage(override val text: String): Message, Logger{
